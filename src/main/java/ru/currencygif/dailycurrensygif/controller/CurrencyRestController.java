@@ -27,17 +27,16 @@ public class CurrencyRestController {
     @Value("${giphy.zero}")
     private String nothing;
 
-
     @GetMapping("/getAllTicker")
     public ResponseEntity<List> getTickers() {
         List<String> currencyInfo = currencyService.getCurrencyTicker();
         return ResponseEntity.ok(currencyInfo);
     }
 
-    @GetMapping("/tst/{ticker}")
-    public ResponseEntity<GiphyDto> getGifByTag(@PathVariable String ticker) {
-        int result = currencyService.getCurrencyComparisonResult(ticker);
+    @GetMapping("/getGif/{ticker}")
+    public ResponseEntity<GiphyDto> getGifByTicker(@PathVariable String ticker) {
         GiphyDto giphyDto;
+        int result = currencyService.getCurrencyComparisonResult(ticker);
         switch (result) {
             case 1 -> giphyDto = giphyInfoService.getRandomGif(rich);
             case 0 -> giphyDto = giphyInfoService.getRandomGif(nothing);
