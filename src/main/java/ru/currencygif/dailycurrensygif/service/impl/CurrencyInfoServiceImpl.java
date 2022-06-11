@@ -62,18 +62,4 @@ public class CurrencyInfoServiceImpl implements CurrencyInfoService {
         return tickerList;
     }
 
-
-
-   /* private List<ComparisonResultDto> compareCurrency(String tag) {
-        List<ComparisonResultDto> comparisonList = new ArrayList<>();
-        for (Map.Entry<String, Double> entry : latest.getRates().entrySet()) {
-            Map<String, Integer> comparedInfo = new HashMap<>();
-            String key = entry.getKey();
-            GiphyDto randomGif = giphyInfoService.getRandomGif(tag);
-            int result = Double.compare(entry.getValue(), historical.getRates().get(key));
-            comparedInfo.put(key, result);
-            comparisonList.add(new ComparisonResultDto(comparedInfo, randomGif));
-        }
-        return comparisonList;
-    }*/
 }
