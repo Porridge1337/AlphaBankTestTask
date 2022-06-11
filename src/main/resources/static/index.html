@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CurrencyGif</title>
+    <script src="/webjars/jquery/3.6.0/jquery.js"></script>
+    <script>
+        $.ajax({
+            url: '/currency',
+            type: 'GET',
+            dataType: 'JSON',
+            success: function (data) {
+                $.each(data, function (ticker, result) {
+                    $('#emp').append('<tr><td>' + ticker + '</td><td>' + result + '</td><td>');
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <th>Ticker</th>
+            <th>Result</th>
+        </tr>
+        </thead>
+        <tbody id="emp">
+        </tbody>
+    </table>
+</body>
+</html>

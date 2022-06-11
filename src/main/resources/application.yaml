@@ -1,0 +1,11 @@
+openexchangerates:
+  url: https://openexchangerates.org/api
+  app:
+    id: a33ca3b5b4c8464fb9b50e4c8f2d5754
+
+giphy:
+  url: https://api.giphy.com/v1/gifs
+  api: jCWylEFUh9HGNpdjaNlhLDqQAmejXW7j
+  rich: rich
+  broke: broke
+  zero: nothing
