@@ -15,7 +15,8 @@
                     dataType: 'JSON',
                     success: function (data) {
                         $('#gif_result').empty('')
-                        $('#gif_result').append('<img src="'+ data.data.images.original.url + '">')
+                        $('#gif_result').append('<img src="' + data.data.images.original.url + '">' +
+                            '<p>' + data.data.title + '</p>')
                     }
                 });
             });
@@ -33,8 +34,8 @@
     </script>
 </head>
 <body>
-    <select id="currency"></select>
-    <div id="gif_result">
-    </div>
+<select id="currency"></select>
+<div id="gif_result">
+</div>
 </body>
 </html>
