@@ -39,7 +39,6 @@ public class CurrencyInfoServiceImpl implements CurrencyInfoService {
         return comparedInfo;
     }
 
-
     private void updateCurrency(long currentTime) {
         if (latest == null || !timeFormat.format(latest.getTimestamp() * 1000L)
                 .equals(timeFormat.format(currentTime))) {
