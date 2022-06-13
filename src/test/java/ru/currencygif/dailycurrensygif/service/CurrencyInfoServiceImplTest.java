@@ -17,7 +17,7 @@ import java.util.Map;
 
 @SpringBootTest
 @DisplayName("Сервис валют должен уметь ")
-public class CurrencyInfoServiceImpl {
+public class CurrencyInfoServiceImplTest {
 
     @MockBean
     private ClientOpenExchangeRates clientOpenExchangeRates;

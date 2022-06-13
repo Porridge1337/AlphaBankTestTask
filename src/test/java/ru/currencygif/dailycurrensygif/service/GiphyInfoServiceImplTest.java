@@ -18,7 +18,7 @@ import java.net.URL;
 
 @SpringBootTest
 @DisplayName("Сервис гифок должен ")
-public class GiphyInfoServiceImpl {
+public class GiphyInfoServiceImplTest {
 
     @Autowired
     private GiphyInfoService giphyInfoService;
